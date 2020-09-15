@@ -166,28 +166,6 @@
 
 	</div>
 
-
-	<div id="instructionsHelpModal" class="modal">
-		<div class="modal-background"></div>
-		<div class="modal-card">
-			<header class="modal-card-head">
-				<p class="modal-card-title">Instructions</p>
-				<button class="delete closeModalTrigger" aria-label="close"></button>
-			</header>
-			<section class="modal-card-body">
-
-				<!--p class="italic">Instructions to go here (pending)</p-->
-
-				<iframe src="https://drive.google.com/file/d/1fY8-__M2f0QSxvBi0P2oycG6F0l1yJiI/view" title="Cascadia Rules"></iframe>
-
-			</section>
-			<footer class="modal-card-foot">
-				<button class="button is-danger closeModalTrigger">Close</button>
-			</footer>
-		</div>
-	</div>
-
-
 	<div id="threeDuplicateTokensModal" class="modal">
 		<div class="modal-background"></div>
 		<div class="modal-card">
@@ -354,10 +332,11 @@
 		<div class="modal-background"></div>
 		<div class="modal-content">
 			<div class="notification">
-				<p>Use the following keys to navigate around the map while playing. (the map will extend as more tiles
-					are placed).</p>
-				<br />
-				<img id="keyboardImg" src="img/keyboard-keys.png" alt="">
+				<p>If you're playing on a computer, you can use following keyboard keys to interact with the map while playing:</p>
+				<p class="has-text-centered title is-6">Navigating Around Map:</p>
+				<img class="keyboardImg" src="img/keyboard-keys-move.png" alt="">
+				<p class="has-text-centered title is-6">Rotating Placed Tile:</p>
+				<img class="keyboardImg" src="img/keyboard-keys-rotate.png" alt="">
 				<button id="commenceGame" class="button is-danger closeModalTrigger">Close</button>
 			</div>
 		</div>
@@ -398,7 +377,7 @@
 				<p>Choose which displayed wildlife tokens you would like to clear by clicking on them (click on them
 					again to deselect the token).</p>
 				<br />
-				<p>Once finalized, press the "Clear Selected Tokens" button to replace the chosen tokens with new tokens
+				<p>Once finalized, press the "Clear Tokens" button to replace the chosen tokens with new tokens
 					from the
 					supply.</p>
 				<br />
