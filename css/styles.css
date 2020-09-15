@@ -40,10 +40,6 @@ body.gameOver #ks-container.compacted{
 	top: 0px;
 }
 
-#ks-container.activeKickstarter {
-	top: -43px;
-}
-
 #ks-container.showKickstarterInfo {
 	opacity:1;
 }
