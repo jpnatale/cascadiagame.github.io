@@ -40,6 +40,10 @@ body.gameOver #ks-container.compacted{
 	top: 0px;
 }
 
+#ks-container.activeKickstarter {
+	top: -43px;
+}
+
 #ks-container.showKickstarterInfo {
 	opacity:1;
 }
@@ -151,7 +155,6 @@ body.gameOver #ks-container.compacted #ks-image {
 
 #container {
 	width: 1260px;
-    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -281,12 +284,12 @@ ion-icon[name="help-circle-outline"] {
 }
 
 #keyboardKeysModal .modal-content {
-	width: 380px;
+	width: 460px;
 }
 
-#keyboardKeysModal .modal-content #keyboardImg {
-	display: block;
-	margin:0 auto 27px;
+#keyboardKeysModal .modal-content .keyboardImg {
+    display: block;
+    margin: 10px auto 2px;
 }
 
 #useNatureCube {
@@ -771,13 +774,23 @@ body.gameOver #mapContainer {
 	cursor:pointer;
 }
 
-#confirmClearSelectedTokens {
+#confirmClearSelectedTokens, #selectAllTokensToClear {
 	position: absolute;
     top: -45px;
-	transition: all 1s ease-in-out;
+    transition: all .7s ease-in-out;
+    font-size: .85rem;
+    width: 102px;
 }
 
-#confirmClearSelectedTokens.revealButton {
+#confirmClearSelectedTokens {
+	right: 120px;
+}
+
+#selectAllTokensToClear {
+	right: 10px;
+}
+
+#confirmClearSelectedTokens.revealButton, #selectAllTokensToClear.revealButton {
 	top: 0px;
 }
 
@@ -917,7 +930,12 @@ body.gameOver #mapContainer {
     float: none;
     margin-top: 0px;
 	margin-left: 0px;
+	opacity:.9;
 }
+
+/* .mapTileContainer.potentialPlacement.previewPotentialTile .tileContainer {
+	
+} */
 
 .mapTileContainer.potentialPlacement, .mapTileContainer.potentialNatureCubeTilePlacement {
 	cursor:hand!important;
@@ -1680,7 +1698,14 @@ top: 290px;
 	width: 190px;
 	opacity: .75;
 	position:absolute;
+}
+
+.tokenTileContainer:not(.natureCubeClearTokens) {
 	transition: all 1s ease-in-out;
+}
+
+.tokenTileContainer.natureCubeClearTokens {
+	transition: all .7s ease-in-out;
 }
 
 .tokenTileContainer.chosenTokenTileContainer {
@@ -1909,158 +1934,71 @@ top: 290px;
   }
 
 
-@media screen and (max-width: 1085px) {
+@media screen and (max-width: 1410px) {
 
-}
-
-
-@media screen and (max-width: 959px) {
-
-	.modal-card, .modal-content {
-		margin: 0 1vw;
+	#flatoutGamesLogo {
+		position:absolute;
+		top: 30px;
+		left: 30px;
+		bottom: auto;
+		right: auto;
 	}
 
-	.modal-card-head {
-		border-bottom: .1vw solid #dbdbdb;
-		border-top-left-radius: 1vw;
-		border-top-right-radius: 1vw;
+	#flatoutGamesLogo.gameOver {
+		top: 60px;
+		left: 30px;
+		bottom: auto;
+		right: auto;
+		position: absolute;
+		width: 90px;
 	}
 
-	.modal-card-foot, .modal-card-head {
-		padding: 2vw;
+	#gameButtonsContainer {
+		width: 810px;
 	}
 
-	.modal-card-body {
-		padding: 3vw;
-	}
-
-	.table.is-bordered td, .table.is-bordered th {
-		border-width: .1vw;
-	}
-
-	.table td, .table th {
-		border: .1vw solid #dbdbdb;
-		border-width: 0 0 .1vw;
-		padding: .9vw 1.85vw;
-		vertical-align: top;
-	}
-
-	.block:not(:last-child), .box:not(:last-child), .breadcrumb:not(:last-child), .content:not(:last-child), .highlight:not(:last-child), .level:not(:last-child), .list:not(:last-child), .message:not(:last-child), .notification:not(:last-child), .pagination:not(:last-child), .progress:not(:last-child), .subtitle:not(:last-child), .table-container:not(:last-child), .table:not(:last-child), .tabs:not(:last-child), .title:not(:last-child) {
-		margin-bottom: 1vw;
-	}
-
-	.button, .file-cta, .file-name, .input, .pagination-ellipsis, .pagination-link, .pagination-next, .pagination-previous, .select select, .textarea {
-		border: .05vw solid transparent;
-		border-radius: 1vw;
-	}
-
-	html {
-		min-width: 0px;
-	}
-
-	#setupLayer {
-		margin-top: 1vw;
-	}
-
-	.box {
-		padding: 2vw 2vw 7vw 2vw;
-	}
-
-	#container {
-		width: 100%;
-		max-width: 93%;
+	#turnsLeftContainer {
+		width: 140px;
 		margin: 0 auto;
 	}
 
-	body {
-		font-size: 2.5vw;
-	}
-
-	.title {
-		margin: 2vw 0vw 2vw!important;
-	}
-
-	.title.is-5 {
-		font-size: 3vw;
-	}
-
-	.tabs.is-medium {
-		font-size: 3vw;
-	}
-
-	.modal-card, .modal-content {
-		width: 90%;
-	}
-
-	.subtitle.is-6 {
-		font-size: 3vw;
-	}
-
-	.title img {
-		width: 60vw;
-		margin-bottom: 1vw;
-	}
-
-	ion-icon[name="help-circle-outline"] {
-		font-size: 4vw;
-		margin-bottom: -1vw;
-		margin-left: .4vw;
-	}
-
-	/* The container */
-	.checkboxEl {
-		margin-top: 0.6vw;
-	}
-
-	/* Create a custom checkbox */
-	.checkmark {
-		height: 3vw;
-		width: 3vw;
-	}
-
-	/* Style the checkmark/indicator */
-	.checkboxEl .checkmark:after {
-		left: 1vw;
-		top: .2vw;
-		width: 1vw;
-		height: 2vw;
-		border-width: 0 .2vw .2vw 0;
-	}
-
-	.modal-card-title {
-		font-size: 4vw;
-	}
-
-	#instructionCategories .instructionsIcon {
-		display: none;
-	}
-
-	.instructionContainer .instructionalImage {
-		border: .1vw solid #000;
-		margin: 4vw auto;
-	}
-
-	#instructionsHelpModal .modal-card .modal-card-body .tabs {
-		font-size: 2.5vw;
-	}
-
-	#instructionsHelpModal .modal-card .modal-card-body .tabs a {
-		padding: 1vw 1.1vw;
-	}
-
-	#frontPageGameInstructionsButton {
-		display: block;
-		margin: 3vw auto 0vw;
-	}
-
-	#instructionsHelpModal .modal-card {
-		width: 90vw;
+	#ks-container #ks-image {
+		left: 719px;
 	}
 
 }
 
 
-/* @media screen and (min-width: 600px) and (max-width: 949px) {
+@media screen and (min-width: 1040px) and (max-width: 1385px) {
+
+	#container {
+		transform: scale(0.84);
+		margin-left: -100px;
+		margin-top: -20px;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 1039px) {
+
+	#container {
+		transform: scale(0.65);
+		margin-left: -210px;
+		margin-top: -100px;
+	}
+
+	#ks-container #ks-image {
+		left: 579px;
+	}
+
+}
+
+
+/* @media screen and (max-width: 959px) {
+
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 949px) {
 
 }
 
