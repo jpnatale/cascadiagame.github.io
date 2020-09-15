@@ -43,22 +43,6 @@
 		gtag('config', 'UA-177957524-1');
 	</script>
 
-	<script>
-		/**
-		* Function that captures a click on an outbound link in Analytics.
-		* This function takes a valid URL string as an argument, and uses that URL string
-		* as the event label. Setting the transport method to 'beacon' lets the hit be sent
-		* using 'navigator.sendBeacon' in browser that support it.
-		*/
-		var captureOutboundLink = function (url) {
-			ga('send', 'event', 'outbound', 'click', url, {
-				'transport': 'beacon',
-				'hitCallback': function () { document.location = url; }
-			});
-		}
-	</script>
-
-
 </head>
 
 <body>
@@ -72,7 +56,7 @@
 	<div id="ks-container" class="compacted">
 
 		<div id="ks-background">
-			<p id="cascadiaKickstarterLink" class="has-text-centered title is-4"><a href="https://www.kickstarter.com/projects/flatoutgames/cascadia" target="_blank" onclick="captureOutboundLink('https://www.kickstarter.com/projects/flatoutgames/cascadia'); return false;">BACK CASCADIA today for only $29 on Kickstarter!</a></p>
+			<p id="cascadiaKickstarterLink" class="has-text-centered title is-4"><a href="https://www.kickstarter.com/projects/flatoutgames/cascadia" target="_blank">BACK CASCADIA today for only $29 on Kickstarter!</a></p>
 		</div>
 
 		<div id="ks-image">
@@ -501,6 +485,9 @@
 			</footer>
 		</div>
 	</div>
+
+
+
 
 	<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
