@@ -3039,8 +3039,6 @@ jQuery.fn.extend({
     // Origin: Davy8 (http://stackoverflow.com/a/5212193/796832)
     parentToAnimate: function(newParent, duration) {
 
-		transform: scale(0.85);
-
         duration = duration || 'slow';
         
 		var $element = $(this);
@@ -3057,7 +3055,6 @@ jQuery.fn.extend({
 		let endTransformVal = 'scale(1)';
 
 		let transformProperty = $('#container').css('transform');
-
 
 		if(transformProperty != 0) {
 			endTransformVal = transformProperty;
