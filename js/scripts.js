@@ -4340,11 +4340,12 @@ function calculateSalmonTokenScoring() {
 	});
 
 	for (let i = 0; i < confirmedSalmonRuns.length; i++) {
-		let salmonInRunNum = confirmedSalmonRuns[i].length;
+
+		let uniqueSalmonIDs = confirmedSalmonRuns[i].filter(onlyUnique);
+		let salmonInRunNum = uniqueSalmonIDs.length;
 		if(salmonInRunNum > 7) salmonInRunNum = 7;
-
-
 		tokenScoring.salmon.totalScore += salmonScoringValues[salmonInRunNum];
+
 	}
 
 	console.groupEnd(calculateSalmonTokenScoringLabel);
